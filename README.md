@@ -1,4 +1,4 @@
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://i.redd.it/qh15btd7id021.gif)
 
 What's a panda prize?
 
@@ -20,31 +20,52 @@ What's a panda prize?
     - naming conventions
         - camelCase for JavaScript
         - kebab-case for CSS class names
-        - Have you removed all your console.log's? 
-        - Did you prettier your file manually or using VS Code's    prettier?
+        - Removed all console.log's
+        - Did you prettier your file manually or using VS Code's prettier?
 
+***
 ## Project Description
 
+- 
+
+### Ideas
+
+- Word game - like a wordle clone
+- 
+- 
 
 
 
-
+***
 ## API
 
+- 
+- 
+- 
 
 
 
 
-
+***
 ## Wireframes
 
 
+- 
+- 
+- 
 
 
 
+
+***
 ## Minimum Viable Product (MPV/Post MVP)
 
 ### MVP
+
+
+- 
+- 
+- 
 
 
 
@@ -52,11 +73,21 @@ What's a panda prize?
 ### Post MVP
 
 
+- 
+- 
+- 
 
 
 
+
+***
 ## Components
 
+- App
+- 
+- 
+- 
+- 
 
 
 
@@ -64,11 +95,14 @@ What's a panda prize?
 | Component 	| Priority 	| Estimated Time 	| Time Invetsted 	| Actual Time |
 | ------------- |:---------:|:-----------------:|:-----------------:|:-----------:|
 | App           |    H      |        2hr        |          -        |       -     |
-|               |           |                   |                   |             |
-|               |           |                   |                   |             |
-|               |           |                   |                   |             |
-|               |           |                   |                   |             |
-|               |           |                   |                   |             |
+|               |    -      |         -         |          -        |      -      |
+|               |    -      |         -         |         -         |      -      |
+|               |     -     |         -         |        -          |      -      |
+|               |     -     |         -         |        -          |      -      |
+|               |     -     |         -         |        -          |      -      |
+
+
+***
 
 
 
@@ -110,11 +144,9 @@ Below is a non-exhaustive list of some free API's you can use. There are _many_ 
 
 * https://igdb.github.io/api/
 
-#### Social Media
 
-* https://developer.twitter.com/en/docs/tweets/search/overview
 
-#### Your code must:
+### Your code must:
 
 - Be properly indented.  
 - Be written with semantic, camelCase JavaScript variable names.  
