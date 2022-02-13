@@ -26,23 +26,28 @@ What's a panda prize?
 ***
 ## Project Description
 
-- 
+  Clean out your fridge app, takes a list of ingredients and searches a database for recipes that use those ingredients.
 
-### Ideas
+### Project Ideas
 
-- Word game - like a wordle clone
-- 
-- 
-
+- Word game - trivia hybrid, anagram song lyrics, 
+- Work search
+- Clean out your fridge app - 
+- Bored App - App to suggest things to do when you are bored
 
 
 ***
 ## API
 
-- 
-- 
-- 
+- [dictionary api](https://dictionaryapi.dev/) 
+    - 
+- [Bored API](https://www.boredapi.com/)
+    - [random activity](https://www.boredapi.com/api/activity/)
+- [Trivia Questions API – jService](https://jservice.io/)
+    - [random](https://jservice.io//api/random)
 
+- [MealDB API](https://www.themealdb.com/api.php)
+    - [by ingredient](https://www.themealdb.com/api/json/v1/1/list.php?i=list)
 
 
 
@@ -50,11 +55,9 @@ What's a panda prize?
 ## Wireframes
 
 
-- 
-- 
-- 
-
-
+![Architecture](Wireframes\architecture.png "Architecture")
+![Small Wireframe](Wireframes\sm-wireframe.png "Small Wireframe")
+![Large Wireframe](Wireframes\lg-wireframe.png "Architecture")
 
 
 ***
@@ -62,49 +65,62 @@ What's a panda prize?
 
 ### MVP
 
-
-- 
-- 
-- 
-
-
-
+- App
+- Main
+- Input
+- List
+- Recipe Cards
+- Results
 
 ### Post MVP
 
-
-- 
-- 
-- 
-
-
-
+- Select and Save, or Discard Recipe Cards
+- Header
+- Synonyms Api to make search more enclusive
 
 ***
 ## Components
 
 - App
-- 
-- 
-- 
+- List
+- Resaults
+- Recipe Cards
 - 
 
 
 
 
-| Component 	| Priority 	| Estimated Time 	| Time Invetsted 	| Actual Time |
-| ------------- |:---------:|:-----------------:|:-----------------:|:-----------:|
-| App           |    H      |        2hr        |          -        |       -     |
-|               |    -      |         -         |          -        |      -      |
-|               |    -      |         -         |         -         |      -      |
-|               |     -     |         -         |        -          |      -      |
-|               |     -     |         -         |        -          |      -      |
-|               |     -     |         -         |        -          |      -      |
+| Component     	| Priority 	| Estimated Time 	| Time Invetsted 	| Actual Time |
+| --------------- |:---------:|:-----------------:|:-----------------:|:-----------:|
+MVP
+| App             |    H      |        2hr        |          -        |       -     |
+| Main            |    H      |        2hr        |          -        |      -      |
+| Input           |    H      |        1hr        |         -         |      -      |
+| List            |    H      |        3hr        |        -          |      -      |
+| Recipe Cards    |    H      |        3hr        |        -          |      -      |
+| Results         |    H      |        2hr        |        -          |      -      |
+Post MVP
+| Select Cards    |    L      |        1hr        |        -          |      -      |
+| Save Cards      |    L      |        2hr        |        -          |      -      |
+| Discard Recipes |    L      |        2hr        |        -          |      -      |
+| Header          |    L      |        1hr        |        -          |      -      |
 
 
 ***
 
+## Additional Libraries
 
+
+
+
+***
+
+## Code Snippet
+
+
+
+
+***
 
 ### 📋 List of API's
 
@@ -112,39 +128,11 @@ What's a panda prize?
   - [List of Public APIs](https://github.com/toddmotto/public-apis)  
   - [More APIs](https://github.com/abhishekbanthia/Public-APIs)  
 
-Below is a non-exhaustive list of some free API's you can use. There are _many_ API's out there, however, so if you find one not on this list that you'd like to use, feel free! Please note that some may require signing up for an API key (e.g. the Marvel API).
-
-  1. Marvel: https://developer.marvel.com/
-  1. Star Wars: https://swapi.co/
-  1. Weather: https://openweathermap.org/api
-  1. News: https://newsapi.org/
-  1. Giphy: https://developers.giphy.com/
-  1. Pokemon: http://pokeapi.co/
-  1. Card Deck: https://deckofcardsapi.com/
-  1. Google Books: https://developers.google.com/books/
-  1. City of Chicago: https://data.cityofchicago.org/
-  1. Beer: https://www.brewerydb.com/developers
-  1. Chuck Norris: http://www.icndb.com/
-  1. Rick and Morty: https://rickandmortyapi.com/documentation/#rest
-  
-
-  1. https://github.com/toddmotto/public-apis
-  1. https://rapidapi.com/
-
-#### Music
-
-* https://bandcamp.com/developer
-* https://developers.soundcloud.com/docs/api/reference
-
-#### Gov
-
-* https://developer.cityofnewyork.us/api/open311-inquiry
+Below is a non-exhaustive list of some free API's you can use. There are _many_ API's out there, however, so if you find one not on this list that you'd like to use, feel free! Please note that some may require signing up for an API key (e.g. the Marvel API).  
 
 #### Games
 
 * https://igdb.github.io/api/
-
-
 
 ### Your code must:
 
@@ -156,6 +144,7 @@ Below is a non-exhaustive list of some free API's you can use. There are _many_ 
 - No pre-loaded `create-react-app` files or code.
 
 ## Necessary Deliverables
+
 
 #### A Completed Project Proposal:
 - Refer to the [project worksheet](/project-worksheet.md) file in this repo for structuring your Proposal.
