@@ -109,6 +109,18 @@ Post MVP
 
 ***
 
+### Actual timeframe
+
+| Component     	         | Priority  | Estimated Time 	 | Time Invetsted    | Actual Time |
+| -------------------------- |:---------:|:-----------------:|:-----------------:|:-----------:|
+MVP
+| File structure and linking |    H      |        1hr        |       45min       |    45min    |
+|                            |    -      |        -          |        -          |      -      |
+
+
+
+***
+
 ## Additional Libraries
 
 
