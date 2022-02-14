@@ -13,9 +13,9 @@ function App() {
 
     return (
         <div>
-            <List />
-            <Cards />
-            <Results />
+            <Routes>
+                <Route path='/List' element={<List />} />
+            </Routes>
         </div>
     )
 }
