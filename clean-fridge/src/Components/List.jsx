@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 function List() {
 
+    const ingredients = []
+
+    // const [ingredient, setIngredient] = useState('')
+
+    
 
 
     return (
-        <div>
+        <div className='list'>
             <section class="items-container">
                 <ul>
-
+                    {}
                 </ul>
             </section>
-
+            <button >Search</button>
         </div>
     );
 }

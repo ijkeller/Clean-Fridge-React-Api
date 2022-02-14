@@ -1,19 +1,26 @@
 import React from 'react';
+import List from './List';
 
 function Input() {
 
     const addIngredientToList = function (event) {
         event.preventDefault();
+        <List
+            
 
+
+
+        />
     }
 
     return (
         <div>
             {/* <h2>Input</h2> */}
             <form>
-                <label>Ingredients</label>
+                <label>Ingredients: </label>
+
                 <input type='text' />
-                <input className='submit' type='submit' value='submit form' />
+                
 
             </form>
         </div>
