@@ -1,6 +1,18 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  border: 5px solid black;
 }
 
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+div {
+  border: 2px solid black;
+  
+}
+
+.commented {
+  display: none;
+}

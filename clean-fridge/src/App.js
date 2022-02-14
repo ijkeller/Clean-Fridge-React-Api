@@ -26,7 +26,7 @@ function App() {
           <Route path='/About' element={<About />} />
         </Routes> */}
       </div>
-
+      <Input />
       
 
     </div>

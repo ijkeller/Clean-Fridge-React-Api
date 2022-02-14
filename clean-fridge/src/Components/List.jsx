@@ -1,11 +1,17 @@
 import React from 'react';
 
 function List() {
-    const List = []
+
+
 
     return (
         <div>
-            <h2>List</h2>
+            <section class="items-container">
+                <ul>
+
+                </ul>
+            </section>
+
         </div>
     );
 }
