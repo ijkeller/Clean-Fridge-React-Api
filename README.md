@@ -28,23 +28,23 @@ What's a panda prize?
 
   Clean out your fridge app, takes a list of ingredients and searches a database for recipes that use those ingredients.
 
-### Project Ideas
+<!-- ### Project Ideas
 
 - Word game - trivia hybrid, anagram song lyrics, 
 - Work search
 - Clean out your fridge app - 
-- Bored App - App to suggest things to do when you are bored
+- Bored App - App to suggest things to do when you are bored -->
 
 
 ***
 ## API
 
-- [dictionary api](https://dictionaryapi.dev/) 
+<!-- - [dictionary api](https://dictionaryapi.dev/) 
     - 
 - [Bored API](https://www.boredapi.com/)
     - [random activity](https://www.boredapi.com/api/activity/)
 - [Trivia Questions API – jService](https://jservice.io/)
-    - [random](https://jservice.io//api/random)
+    - [random](https://jservice.io//api/random) -->
 
 - [MealDB API](https://www.themealdb.com/api.php)
     - [by ingredient](https://www.themealdb.com/api/json/v1/1/list.php?i=list)
@@ -77,6 +77,7 @@ What's a panda prize?
 - Select and Save, or Discard Recipe Cards
 - Header
 - Synonyms Api to make search more enclusive
+- About
 
 ***
 ## Components
