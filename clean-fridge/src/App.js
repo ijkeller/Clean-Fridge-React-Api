@@ -10,6 +10,9 @@ import Input from './Components/Input';
 
 
 function App() {
+
+
+
   return (
     <div className="App">
 
@@ -26,8 +29,6 @@ function App() {
           <Route path='/About' element={<About />} />
         </Routes> */}
       </div>
-      <Input />
-      
 
     </div>
   );
