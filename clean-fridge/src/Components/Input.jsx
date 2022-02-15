@@ -6,9 +6,6 @@ function Input() {
     const addIngredientToList = function (event) {
         event.preventDefault();
         <List
-            
-
-
 
         />
     }
