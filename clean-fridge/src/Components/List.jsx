@@ -1,42 +1,50 @@
 import React, { useState } from 'react';
 
 import Input from './Input';
+import Results from './Results';
 
 // List code was taken from useState lab on codesandbox and adjusted.
 
-function List() {
+const List = (food) => {
 
     // 5) create initial ingredients list
 
     const ingredients = [{
         id: 1,
-        food: "love"
+        fridgeIngredient: "love"
     },
     {
         id: 2,
-        food: "butter"
+        fridgeIngredient: "butter"
     },
     {
         id: 3,
-        food: "milk"
+        fridgeIngredient: "milk"
     }
     ];
+
+    // console.log(ingredients);
+    // console.log(food);
+
+    const [array, setArray] = useState(ingredients)
 
     // 6) take new item from input and append to ingredients list 
     // 6.5) create a new ID and add that to the ingredient object
 
-    const addIngredient = (props) => {
-        const itemsCopy = [...items]; // not sure why this is here
-        const foodItem = props.food;
-        const newItem = { food: foodItem };
-        if (items.length === 0) {
-            newItem.id = 1;
-        } else {
-            newItem.id = items[items.length - 1].id + 1;
-        }
-        itemsCopy.push(newItem);
-        setItems(itemsCopy);
-    };
+    // const addIngredient = () => {
+
+    //     const listCopy = [...array]; // do we need to make a copy or could we just append the list directly?
+    //     const foodItem = { food };
+    //     const newItem = { food: foodItem };
+    //     array.length === 0 ? newItem.id=1 : newItem.id = array[array.length - 1].id + 1;
+    //     // if (array.length === 0) {
+    //     //     newItem.id = 1;
+    //     // } else {
+    //     //     newItem.id = array[array.length - 1].id + 1;
+    //     // }
+    //     listCopy.push(newItem);
+    //     setArray(listCopy);
+    // };
 
 
     // 7) worry about being able to remove the list items later.
@@ -46,8 +54,8 @@ function List() {
     //     };
 
     // const removeItem = (id) => {
-    //     const itemsCopy = [...items];
-    //     const filteredItems = itemsCopy.filter((item) => item.id !== id);
+    //     const listCopy = [...items];
+    //     const filteredItems = listCopy.filter((item) => item.id !== id);
     //     setItems(filteredItems);
     // };
 
@@ -64,18 +72,24 @@ function List() {
 
     // 8) return list to App.js
 
+    const Iterate = array.map((fridgeIngredient, index) => {
 
 
+        return (
 
-    
+            <li>{fridgeIngredient}</li>
+
+        )
+    })
 
 
     return (
         <div className='list'>
+            <h3>List</h3>
             <section class="items-container">
                 <h4 className='list-title'>Fridge Contents</h4>
                 <ul>
-                    { }
+                    {Iterate}
                 </ul>
             </section>
             <button >Search</button>

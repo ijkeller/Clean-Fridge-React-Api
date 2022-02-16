@@ -9,15 +9,23 @@ import Cards from './Components/Cards/Cards';
 import Input from './Components/Input';
 
 
-function App() {
-
-
-
+const App = () => {
   return (
-    <div className="App">
+    
+      <div className="App">
+        <Input />
+        <List />
+        <Results />
+      </div>
+    
+  );
+}
 
-      <div className='commented'>
-        {/* <nav className='nav'>
+export default App;
+
+
+{/* <div className='commented'>
+        <nav className='nav'>
 
           <Link to='/Main'>Main</Link>
 
@@ -27,11 +35,5 @@ function App() {
         <Routes>
           <Route path='/Main' element={<Main />} />
           <Route path='/About' element={<About />} />
-        </Routes> */}
-      </div>
-
-    </div>
-  );
-}
-
-export default App;
+        </Routes>
+      </div> */}
