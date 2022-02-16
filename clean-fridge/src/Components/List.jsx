@@ -2,49 +2,32 @@ import React, { useState } from 'react';
 
 import Input from './Input';
 import Results from './Results';
+import IngredientArray from './IngredientArray';
 
 // List code was taken from useState lab on codesandbox and adjusted.
 
-const List = (food) => {
+const List = (newItem) => {
 
-    // 5) create initial ingredients list
-
-    const ingredients = [{
-        id: 1,
-        fridgeIngredient: "love"
-    },
-    {
-        id: 2,
-        fridgeIngredient: "butter"
-    },
-    {
-        id: 3,
-        fridgeIngredient: "milk"
-    }
-    ];
-
-    // console.log(ingredients);
-    // console.log(food);
-
-    const [array, setArray] = useState(ingredients)
+    const [fridgeArray, setFridgeArray] = useState(IngredientArray)
 
     // 6) take new item from input and append to ingredients list 
     // 6.5) create a new ID and add that to the ingredient object
 
-    // const addIngredient = () => {
+    const addIngredient = () => {
 
-    //     const listCopy = [...array]; // do we need to make a copy or could we just append the list directly?
-    //     const foodItem = { food };
-    //     const newItem = { food: foodItem };
-    //     array.length === 0 ? newItem.id=1 : newItem.id = array[array.length - 1].id + 1;
-    //     // if (array.length === 0) {
-    //     //     newItem.id = 1;
-    //     // } else {
-    //     //     newItem.id = array[array.length - 1].id + 1;
-    //     // }
-    //     listCopy.push(newItem);
-    //     setArray(listCopy);
-    // };
+        const listCopy = [...fridgeArray];
+        console.table('List.jsx - addIngredient function - listCopy: ' + listCopy)
+        const newFoodItem = { newItem };
+        const newArrayObject = { food: newFoodItem };
+        listCopy.length === 0 ? newArrayObject.id=1 : newArrayObject.id = newArrayObject[listCopy.length - 1].id + 1;
+        // if (listCopy.length === 0) {
+        //     newArrayObject.id = 1;
+        // } else {
+        //     newArrayObject.id = listCopy[listCopy.length - 1].id + 1;
+        // }
+        listCopy.push(newItem);
+        setFridgeArray(listCopy);
+    };
 
 
     // 7) worry about being able to remove the list items later.
@@ -72,8 +55,7 @@ const List = (food) => {
 
     // 8) return list to App.js
 
-    const Iterate = array.map((fridgeIngredient, index) => {
-
+    const Iterate = fridgeArray.map((fridgeIngredient, index) => {
 
         return (
 
