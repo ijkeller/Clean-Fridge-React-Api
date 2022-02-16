@@ -37,21 +37,24 @@ const Input = () => {
         // 4) send the new item to the list
 
         <List
-            newItem={newItem} // 
+            newItem={newItem} 
+            handleClick={e}
         />
+        console.log('list - handleSubmit - newItem ' + newItem)
 
         setValue("");
     };
 
+    
+
     return (
         <div className='input'>
-            <h3>Input</h3>
             <form onSubmit={handleSubmit}>
                 <label>
                     Ingredient:
                     <input type="text" value={value} onChange={handleChange} />
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit"  />
             </form>
         </div>
     )
