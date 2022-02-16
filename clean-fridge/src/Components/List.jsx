@@ -10,6 +10,9 @@ const List = (newItem) => {
 
     const [fridgeArray, setFridgeArray] = useState(IngredientArray)
 
+    console.log(IngredientArray)
+    console.log("list - fridgeArray: " + fridgeArray)
+
     // 6) take new item from input and append to ingredients list 
     // 6.5) create a new ID and add that to the ingredient object
 
@@ -56,13 +59,9 @@ const List = (newItem) => {
     // 8) return list to App.js
 
     const Iterate = fridgeArray.map((fridgeIngredient, index) => {
-
         return (
-
-            <li>{fridgeIngredient}</li>
-
-        )
-    })
+            <li>{fridgeIngredient.food}</li>);
+    });
 
 
     return (

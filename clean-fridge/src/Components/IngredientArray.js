@@ -1,13 +1,16 @@
-[{
+const ingredientArray = [
+{
     id: 1,
-    fridgeIngredient: "love"
+    food: "love"
 },
 {
     id: 2,
-    fridgeIngredient: "butter"
+    food: "butter"
 },
 {
     id: 3,
-    fridgeIngredient: "milk"
+    food: "milk"
 }
 ];
+
+export default ingredientArray;
