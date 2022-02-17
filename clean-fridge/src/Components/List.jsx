@@ -3,37 +3,23 @@ import React, { useEffect, useState } from 'react';
 import Input from './Input';
 import Results from './Results';
 import IngredientArray from './IngredientArray';
+import Button from './Button';
 
-// List code was taken from useState lab on codesandbox and adjusted.
-
-const List = ({setNewItem}) => {
+const List = ({newItem}) => {
 
     const [fridgeArray, setFridgeArray] = useState(IngredientArray)
-    const [newItem, setNewItem] = useState('')
 
     // 6) take new item from input and append to ingredients list 
     // 6.5) create a new ID and add that to the ingredient object
 
-    useEffect(() => {
-        window.addEventListener('submit', (event) => {
-            event.preventDefault();
-            console.log('list - newItem ' + newItem)
+    const addItem = (textValue) => {
             const listCopy = [...fridgeArray];
-            console.table('List.jsx - addIngredient function - listCopy: ' + listCopy)
-            const newFoodItem = { newItem };
-            const newArrayObject = { food: newFoodItem };
-            listCopy.length === 0 ? newArrayObject.id = 1 : newArrayObject.id = newArrayObject[listCopy.length - 1].id + 1;
-            // if (listCopy.length === 0) {
-            //     newArrayObject.id = 1;
-            // } else {
-            //     newArrayObject.id = listCopy[listCopy.length - 1].id + 1;
-            // }
-            listCopy.push(newItem);
+            const newArrayObject = { food: textValue };
+            fridgeArray.length === 0 ? newArrayObject.id = 1 : newArrayObject.id = fridgeArray[fridgeArray.length - 1].id + 1;
+            listCopy.push(newArrayObject);
             setFridgeArray(listCopy);
-        });
-    }, []);
-
-
+        };
+    
         // 7) worry about being able to remove the list items later.
 
         // const FridgeItem = (props) => {
@@ -59,22 +45,27 @@ const List = ({setNewItem}) => {
 
         // 8) return list to App.js
 
-        const Iterate = fridgeArray.map((fridgeIngredient, index) => {
+        const Iterate = fridgeArray.map((fridgeIngredient) => {
             return (
-                <li key={index}>{fridgeIngredient.food}</li>);
+                <li key={fridgeIngredient.id} > -  
+                {fridgeIngredient.food}
+                </li>
+                );
         });
 
 
         return (
+            <>
+            <Input addItem={addItem} />
             <div className='list'>
-                <section class="items-container">
+                <section className="items-container">
                     <h4 className='list-title'>Fridge Contents</h4>
-                    <ul>
-                        {Iterate}
-                    </ul>
+                    <ul>{Iterate}</ul>
                 </section>
-                <button>Search</button>
+                < Button text={'Search'} />
             </div>
+            <Results fridgeArray={fridgeArray} />
+            </>
         );
     }
 

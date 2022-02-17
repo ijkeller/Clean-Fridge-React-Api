@@ -8,8 +8,6 @@ const Input = (props) => {
     // const [newItem, setNewItem] = useState('');
     const [textValue, setTextValue] = useState("");
 
-    let newItem = '';
-
     // 1) create text input and submit button in return
 
     // in return
@@ -25,7 +23,6 @@ const Input = (props) => {
 
     const handleChange = (e) => {
         e.preventDefault();
-        // console.log('Input.jsx - handleChange - value', e.target.value);
         setTextValue(e.target.value);
     };
 
@@ -34,9 +31,9 @@ const Input = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         props.addItem(textValue);
+        console.log(textValue)
         setTextValue("");
     };
-
 
     return (
         <div className='input'>
