@@ -1,38 +1,28 @@
-import React, { useState, } from 'react';
+import React from 'react';
 import { Route, Link, Routes, Navigate } from 'react-router-dom';
 
-import Main from './Components/Main';
+import Support from './Components/Support';
 import About from './Components/About';
 import List from './Components/List';
 import Results from './Components/Results';
-import Cards from './Components/Cards/Cards';
-import Input from './Components/Input';
-
 
 const App = () => {
   return (
-    
-      <div className="App">
-        <Input />
-        <Results />
-      </div>
-    
+    <div className="App">
+      <nav className='nav'>
+
+        <Link to='/support'>Support</Link>
+        <Link to='/about'>About</Link>
+
+      </nav>
+      <Routes>
+        <Route path='/support' element={<Navigate to ='/support' />} />
+        <Route path='/about' element={<Navigate to ='/about' />} />
+      </Routes>
+
+      <List />
+      <Results />
+    </div>
   );
 }
-
 export default App;
-
-
-{/* <div className='commented'>
-        <nav className='nav'>
-
-          <Link to='/Main'>Main</Link>
-
-          <Link to='/About'>About</Link>
-
-        </nav>
-        <Routes>
-          <Route path='/Main' element={<Main />} />
-          <Route path='/About' element={<About />} />
-        </Routes>
-      </div> */}
