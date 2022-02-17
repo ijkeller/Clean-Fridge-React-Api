@@ -91,7 +91,7 @@ What's a panda prize?
 
 
 
-| Component     	| Priority 	| Estimated Time 	| Time Invetsted 	| Actual Time |
+| Component       | Priority  | Estimated Time 	  | Time Invetsted 	  | Actual Time |
 | --------------- |:---------:|:-----------------:|:-----------------:|:-----------:|
 MVP
 | App             |    H      |        2hr        |          -        |       -     |

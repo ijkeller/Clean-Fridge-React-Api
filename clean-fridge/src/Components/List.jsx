@@ -6,17 +6,18 @@ import IngredientArray from './IngredientArray';
 
 // List code was taken from useState lab on codesandbox and adjusted.
 
-const List = (newItem, handleClick) => {
+const List = ({setNewItem}) => {
 
     const [fridgeArray, setFridgeArray] = useState(IngredientArray)
+    const [newItem, setNewItem] = useState('')
 
     // 6) take new item from input and append to ingredients list 
     // 6.5) create a new ID and add that to the ingredient object
 
-    useEffect((handleClick) => {
-        window.addEventListener({handleClick}, (event) => {
+    useEffect(() => {
+        window.addEventListener('submit', (event) => {
             event.preventDefault();
-            console.log('list - useEffect')
+            console.log('list - newItem ' + newItem)
             const listCopy = [...fridgeArray];
             console.table('List.jsx - addIngredient function - listCopy: ' + listCopy)
             const newFoodItem = { newItem };
@@ -60,7 +61,7 @@ const List = (newItem, handleClick) => {
 
         const Iterate = fridgeArray.map((fridgeIngredient, index) => {
             return (
-                <li>{fridgeIngredient.food}</li>);
+                <li key={index}>{fridgeIngredient.food}</li>);
         });
 
 
@@ -72,7 +73,7 @@ const List = (newItem, handleClick) => {
                         {Iterate}
                     </ul>
                 </section>
-                <button >Search</button>
+                <button>Search</button>
             </div>
         );
     }

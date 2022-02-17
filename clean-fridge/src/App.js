@@ -14,7 +14,6 @@ const App = () => {
     
       <div className="App">
         <Input />
-        <List />
         <Results />
       </div>
     

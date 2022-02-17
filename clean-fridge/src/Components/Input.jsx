@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import List from './List';
 import ingredientArray from './IngredientArray';
 
-const Input = () => {
+const Input = (props) => {
 
-    const [newItem, setNewItem] = useState('');
-    const [value, setValue] = useState("");
+    // const [newItem, setNewItem] = useState('');
+    const [textValue, setTextValue] = useState("");
+
+    let newItem = '';
 
     // 1) create text input and submit button in return
 
@@ -24,37 +26,26 @@ const Input = () => {
     const handleChange = (e) => {
         e.preventDefault();
         // console.log('Input.jsx - handleChange - value', e.target.value);
-        setValue(e.target.value);
+        setTextValue(e.target.value);
     };
 
     // 3) use handleSubmit on submit button to convert the current value to setItems
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setNewItem(value);
-        // console.log('input.js - handleSubmit, item:' + item);
-
-        // 4) send the new item to the list
-
-        <List
-            newItem={newItem} 
-            handleClick={e}
-        />
-        console.log('list - handleSubmit - newItem ' + newItem)
-
-        setValue("");
+        props.addItem(textValue);
+        setTextValue("");
     };
 
-    
 
     return (
         <div className='input'>
             <form onSubmit={handleSubmit}>
                 <label>
                     Ingredient:
-                    <input type="text" value={value} onChange={handleChange} />
+                    <input type="text" value={textValue} onChange={handleChange} />
                 </label>
-                <input type="submit" value="Submit"  />
+                <input type="submit" value="Submit" />
             </form>
         </div>
     )
