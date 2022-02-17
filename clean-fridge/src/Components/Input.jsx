@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 
-import List from './List';
-import ingredientArray from './IngredientArray';
-
 const Input = (props) => {
 
     // const [newItem, setNewItem] = useState('');
