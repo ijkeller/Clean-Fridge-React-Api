@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Link, Routes, Navigate } from 'react-router-dom';
 
-import List from './Components/List2';
-import Form from './Components/Form'
-import RecipeInfo from './Components/RecipeInfo'
+import Home from './Components/Home';
+import Form from './Components/Form';
+import RecipeInfo from './Components/RecipeInfo';
+import Support from './Components/Support';
+import About from './Components/About';
 
 const App = () => {
 
@@ -37,8 +39,9 @@ const App = () => {
 
             </nav>
             <Routes>
-                <Route path='/support' element={<Navigate to='/support' />} />
-                <Route path='/about' element={<Navigate to='/about' />} />
+                <Route path='/' element={<Home />} />
+                <Route path='/support' element={<Support />} />
+                <Route path='/about' element={<About />} />
             </Routes>
             <Form handleSubmit={handleSubmit} />
             {recipeData.map( recipe => <RecipeInfo recipe={recipe} />)}
