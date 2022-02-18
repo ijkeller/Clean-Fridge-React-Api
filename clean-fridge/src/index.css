@@ -7,20 +7,37 @@
 }
 
 body {
-  width: 97vw;
+  width: 95vw;
   height: 97vh;
 }
 
 .App {  
   display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 10% 90%;
+  /* grid-template-columns: 30% 70%;
+  grid-template-rows: 10% 90%; */
 }
 
 div {
-  border: 1px solid black;
+  border: none;
   width: 100%;
   height: 100%;
+  padding: 0 auto;
+  gap: 5px;
+}
+
+.recipe-info {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0,  0, .2);
+  text-align: center;
+}
+
+img {
+  max-width: 40%;
+  height: auto;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0,  0, .2);
 }
 
 .input {
@@ -32,15 +49,29 @@ div {
 .nav {
   grid-row: 1/2;
   grid-column: 2/3;
-  text-align: right;
   font-size: 1.7rem;
   font-weight: bold;
+  text-align: right;
 }
 
 a:link {
   color: black;
   text-decoration: none;
   margin-right: 10px;
+}
+
+.home {
+  color: black;
+  text-decoration: none;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.routes {
+  grid-column: 1/3;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .list {
@@ -56,4 +87,22 @@ li {
 .results {
   grid-row: 2/3;
   grid-column: 2/3;
+}
+
+@media screen and (max-width: 600px) {
+
+  .App {  
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+  }
+
+  img {
+    max-width: 60%;
+    height: auto;
+  }
+
+  .nav {
+    font-size: 1.4rem;
+  }
 }
