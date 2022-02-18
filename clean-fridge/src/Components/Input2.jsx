@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 
+import Button from './Button';
+
 const Input = (props) => {
 
     // const [newItem, setNewItem] = useState('');
     const [textValue, setTextValue] = useState("");
+
 
     // 1) create text input and submit button in return
 

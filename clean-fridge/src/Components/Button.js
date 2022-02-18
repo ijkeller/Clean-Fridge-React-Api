@@ -3,9 +3,9 @@ import React from 'react';
 function Button(props) {
 
     return (
-        <Button>
+        <button>
             {props.text}
-        </Button>
+        </button>
     );
 }
 

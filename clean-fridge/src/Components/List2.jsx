@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-import Input from './Input';
-import Results from './Results';
+import Input from './Input2';
+import Results from './Results2';
 import IngredientArray from './IngredientArray';
 import Button from './Button';
 
 const List = () => {
 
     const [fridgeArray, setFridgeArray] = useState(IngredientArray)
+
+    const [ingredientName, setIngredientName] = useState(fridgeArray[0].food)
 
     // 6) take new item from input and append to ingredients list 
     // 6.5) create a new ID and add that to the ingredient object
@@ -53,18 +55,27 @@ const List = () => {
         );
     });
 
+    const handleSubmitTwo = (e) => {
+        e.preventDefault();
+        setIngredientName(fridgeArray[0].food)
+        console.log(ingredientName)
+    };
+
 
     return (
         <>
-            <Input addItem={addItem} />
+            <Input addItem={addItem} fridgeArray={fridgeArray} />
             <div className='list'>
                 <section className="items-container">
                     <h4 className='list-title'>Fridge Contents</h4>
                     <ul>{Iterate}</ul>
                 </section>
-                < Button text={'Search'} />
+                <form onSubmit={handleSubmitTwo}>
+                    <input type="submit" value="Submit" />
+                </form>
+                {/* <button onClick={console.log(fridgeArray[0].food)} >Search </button> */}
             </div>
-            <Results fridgeArray={fridgeArray} />
+            <Results fridgeArray={fridgeArray} ingredientName={ingredientName}/>
         </>
     );
 }

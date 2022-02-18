@@ -1,7 +1,7 @@
 const ingredientArray = [
 {
     id: 1,
-    food: "love"
+    food: "chicken"
 },
 {
     id: 2,
