@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/clean-fridge/static/css/main.c73466d7.css",
+    "main.js": "/clean-fridge/static/js/main.e05d1c67.js",
+    "index.html": "/clean-fridge/index.html",
+    "main.c73466d7.css.map": "/clean-fridge/static/css/main.c73466d7.css.map",
+    "main.e05d1c67.js.map": "/clean-fridge/static/js/main.e05d1c67.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c73466d7.css",
+    "static/js/main.e05d1c67.js"
+  ]
+}
