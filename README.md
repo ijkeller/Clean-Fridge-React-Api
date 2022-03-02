@@ -1,8 +1,4 @@
-![Alt Text](https://i.redd.it/qh15btd7id021.gif)
-
-What's a panda prize?
-
-# Project2
+# Project2 - Clean Fridge App
 
 ## Requirements
 
